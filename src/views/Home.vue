@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     submitTodo() {
-      this.$store.commit(types.ADD_TODO, {
+      this.$store.commit(`todo/${types.ADD_TODO}`, {
         title: this.newTodoTitle,
         complete: false
       });

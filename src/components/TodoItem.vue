@@ -22,13 +22,13 @@ export default {
   },
   methods: {
     handleOnChange({ target: { checked } }) {
-      this.$store.commit(types.SET_STATE, {
+      this.$store.commit(`todo/${types.SET_STATE}`, {
         index: this.index,
         complete: checked
       });
     },
     handleRemove() {
-      this.$store.commit(types.REMOVE_TODO, this.index);
+      this.$store.commit(`todo/${types.REMOVE_TODO}`, this.index);
     }
   }
 };

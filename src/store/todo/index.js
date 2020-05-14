@@ -5,6 +5,7 @@ import * as types from "./mutation_types";
 Vue.use(Vuex);
 
 const todo = {
+  namespaced: true,
   state: {
     todoList: []
   },
