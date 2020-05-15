@@ -1,7 +1,9 @@
 <template>
   <article class="wrapper">
     <div :class="{ done: complete }" class="title">
-      {{ title }}
+      <router-link :to="'todo/' + index">
+        {{ title }}
+      </router-link>
     </div>
     <input
       type="checkbox"
@@ -51,6 +53,10 @@ export default {
 
   &:first-of-type {
     margin-top: 0;
+  }
+
+  a {
+    text-align: left;
   }
 }
 
