@@ -3,7 +3,12 @@
     <div :class="{ done: complete }" class="title">
       {{ title }}
     </div>
-    <input type="checkbox" @change="handleOnChange" class="checkbox" />
+    <input
+      type="checkbox"
+      :checked="complete"
+      @change="handleOnChange"
+      class="checkbox"
+    />
     <button @click="handleRemove" class="remove">
       X
     </button>

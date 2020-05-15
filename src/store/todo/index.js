@@ -15,7 +15,9 @@ const todo = {
       state.todoList.push(todo);
     },
     [types.SET_STATE](state, { index, complete }) {
-      state.todoList[index].complete = complete;
+      state.todoList = state.todoList.map((todo, idx) => {
+        return index === idx ? { ...todo, complete } : todo;
+      });
     },
     [types.REMOVE_TODO](state, index) {
       Vue.delete(state.todoList, index);
