@@ -9,12 +9,14 @@
           type="text"
           ref="input"
           placeholder="What has to be accomplished?"
+          data-cy="input_field"
         />
         <button
           @click="submitTodo"
           :disabled="isSubmitTodoButtonDisabled"
           type="button"
           class="submit_button"
+          data-cy="submit_button"
         >
           Add
         </button>
@@ -22,7 +24,12 @@
       <TodoList :todos="todos" />
     </section>
     <section class="undo_redo_panel">
-      <button class="undo" @click="undo" :disabled="isUndoButtonDisabled">
+      <button
+        class="undo"
+        @click="undo"
+        :disabled="isUndoButtonDisabled"
+        data-cy="undo_button"
+      >
         Undo
       </button>
       <button class="redo" @click="redo" :disabled="isRedoButtonDisabled">

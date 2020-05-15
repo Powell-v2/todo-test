@@ -1,5 +1,5 @@
 <template>
-  <ul class="list">
+  <ul class="list" data-cy="todo_list">
     <TodoItem
       v-for="(todo, index) in todos"
       :key="todo.title"

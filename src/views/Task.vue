@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h1>Too doo called {{ title }}</h1>
     <p>Marked as {{ isDone ? "'done'" : "'undone'" }}</p>
-    <router-link to="/">Go back</router-link>
+    <router-link to="/" data-cy="link_to_home_page">Go back</router-link>
   </div>
 </template>
 

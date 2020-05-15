@@ -1,6 +1,6 @@
 <template>
-  <article class="wrapper">
-    <div :class="{ done: complete }" class="title">
+  <article class="wrapper" data-cy="todo_item">
+    <div :class="{ done: complete }" class="title" data-cy="todo_title">
       <router-link :to="'todo/' + index">
         {{ title }}
       </router-link>
@@ -11,7 +11,7 @@
       @change="handleOnChange"
       class="checkbox"
     />
-    <button @click="handleRemove" class="remove">
+    <button @click="handleRemove" class="remove" data-cy="remove_button">
       X
     </button>
   </article>
