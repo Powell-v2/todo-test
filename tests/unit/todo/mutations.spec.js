@@ -15,7 +15,7 @@ beforeEach(() => {
   });
 });
 
-function prefixTodoMutation(mutation) {
+export function prefixTodoMutation(mutation) {
   return `todo/${mutation}`;
 }
 
